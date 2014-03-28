@@ -6,3 +6,8 @@ then
 	do
 		myfile=$(basename $f)
 		jspath="live/lib/impact/${myfile%.*}.js"
+		uglifyjs $jspath -o $jspath
+	done
+fi
+rm live/weltmeister.html
+rm -rf live/lib/weltmeister
