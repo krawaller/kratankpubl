@@ -6,7 +6,3 @@ then
 	do
 		myfile=$(basename $f)
 		jspath="live/lib/impact/${myfile%.*}.js"
-		echo $jspath
-		uglifyjs $jspath -o $jspath
-	done
-fi
