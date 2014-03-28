@@ -1,11 +1,11 @@
-rm -rf -- deploy
-cp -r ../kratank deploy
+rm -rf -- live
+cp -r ../kratank live
 if (true)
 then
-	for f in `ls deploy/lib/impact/*`
+	for f in `ls live/lib/impact/*`
 	do
 		myfile=$(basename $f)
-		jspath="deploy/lib/impact/${myfile%.*}.js"
+		jspath="live/lib/impact/${myfile%.*}.js"
 		echo $jspath
 		uglifyjs $jspath -o $jspath
 	done
